@@ -10,11 +10,9 @@ namespace Rent_Premises.Controllers;
 [Route("api/[controller]")]
 public class TypeOfPremisesController : ControllerBase
 {
-    private readonly IMapper _mapper;
     private readonly ITypeOfPremises _typeOfPremisesService;
-    public TypeOfPremisesController(IMapper mapper, ITypeOfPremises typeOfPremisesService)
+    public TypeOfPremisesController(ITypeOfPremises typeOfPremisesService)
     {
-        _mapper = mapper;
         _typeOfPremisesService = typeOfPremisesService;
     }
     [HttpGet]

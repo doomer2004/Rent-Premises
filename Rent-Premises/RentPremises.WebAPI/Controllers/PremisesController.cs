@@ -12,12 +12,10 @@ namespace Rent_Premises.Controllers;
 public class PremisesController : ControllerBase
 {
     private readonly IPremises _premisesService;
-    private readonly IMapper _mapper;
     
-    public PremisesController(IPremises premisesService, IMapper mapper)
+    public PremisesController(IPremises premisesService)
     {
         _premisesService = premisesService;
-        _mapper = mapper;
     }
     
     [HttpGet]
